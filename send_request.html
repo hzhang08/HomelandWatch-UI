@@ -3,7 +3,7 @@
 <head>
   <!-- ... -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <link href="/tailwind.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <img class="object-contain h-12 " src="img/icon-menu-512.png">
             </div>
             <div class="rounded-full h-12 w-12 circle bg-green float-right">
-                <img class="object-contain h-12 " src="img/elder_cropped.png">
+                <img id="avatar" class="object-contain h-12 " src="img/elder_male1.png">
             </div>
         </div>
     
@@ -37,21 +37,24 @@
         </div>
 
         <div class="flex justify-center">
-            <div><button class="h-12 px-12 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800 mt-10">确认</button></div>
+            <div><button id="confirm" class="h-12 px-12 m-2 text-lg text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800 mt-10">确认</button></div>
         </div>
     </div>
 
-        <!-- <div class="bg-rose-300">
-            <img class="object-contain h-48 w-full" src="img/780.jpeg">
-        </div>
-        <div class="mb-3 pt-0">
-            <input type="text" placeholder="Username" class="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"/>
-        </div>
+    <script>
     
-        <div class="mb-3 pt-0">
-            <input type="password" placeholder="Password" class="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"/>
-        </div> -->
+        document.getElementById("confirm").onclick = function() { 
 
+                window.location.href = "request_details.html"; 
+        
+        };
+
+        document.getElementById("avatar").onclick = function() { 
+
+            window.location.href = "index.html"; 
+
+        };        
+    </script>
     
 </body>
 </html>
